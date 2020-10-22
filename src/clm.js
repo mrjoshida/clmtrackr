@@ -63,6 +63,9 @@ var clm = {
 		var currentPositions = [];
 		var previousParameters = [];
 		var previousPositions = [];
+		
+		var currentPositionsSimple = {};
+		var previousPositionsSimple = {};
 
 		var patches = [];
 		var responses = [];
@@ -356,6 +359,8 @@ var clm = {
 							currentParameters[3] = translateY;
 
 							currentPositions = calculatePositions(currentParameters, true);
+							
+							// Assign raw position data to easier names
 
 							first = false;
 							detectingFace = false;
@@ -684,6 +689,16 @@ var clm = {
 			}
 		}
 
+		/*
+		 *	get simpified positions of current model fit
+		 */
+		this.getSimplePosition = function() {
+			if (first) {
+				return false;
+			} else {
+				return currentPositionsSimple;
+			}
+		}
 		/*
 		 *	get parameters of current model fit
 		 */

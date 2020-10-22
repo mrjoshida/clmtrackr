@@ -1,7 +1,15 @@
 clmtrackr
 ======
 
-This version of clmtrackr has been modified to provide simpler access to facial location data. After testing I plan to move these over to a dedicated p5.js plugin.
+This version of clmtrackr has been modified to provide simpler access to facial location data. After testing I plan to move these over to a dedicated p5.js plugin. The major change in this version adding a `getSimpleLocations` method that returns an object with the following data:
+
+* `eye_l` and `eye_r` - the center points of the left and right eye, respectively.
+* `mouth` - the center point of the mouth.
+* `nose` - the tip of the nose.
+* `top`, `bottom`, `left`, and `right` - the edges of the face.
+* `eye_l_w`, `eye_l_h` (same pattern for right eye, nose, and mouth) - the width and height of each facial element.
+* `angle` - the angle of the face, calculated based on eyes.
+
 
 [![npm version](https://img.shields.io/npm/v/clmtrackr.svg)](https://www.npmjs.com/package/clmtrackr)
 

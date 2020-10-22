@@ -1,6 +1,8 @@
 clmtrackr
 ======
 
+This version of clmtrackr has been modified to provide simpler access to facial location data. After testing I plan to move these over to a dedicated p5.js plugin.
+
 [![npm version](https://img.shields.io/npm/v/clmtrackr.svg)](https://www.npmjs.com/package/clmtrackr)
 
 ![tracked face](https://auduno.github.io/clmtrackr/examples/media/clmtrackr_03.jpg)

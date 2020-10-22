@@ -365,6 +365,7 @@ var clm = {
 							currentPositionsSimple.eye_r = currentPositions[32];
 							currentPositionsSimple.mouth = currentPositions[60];
 							currentPositionsSimple.nose = currentPositions[62];
+							currentPositionsSimple.eye_l_w = this.getWidth(currentPositions[23][0],currentPositions[23][1], currentPositions[25][0], currentPositions[23][1]);
 
 							first = false;
 							detectingFace = false;
@@ -947,6 +948,11 @@ var clm = {
 				}
 			}
 			//return vecmatrix;
+		}
+		
+		// Caldulate the distance between two points
+		var getDist = (x1, y1, x2, y2) {
+  			return Math.sqrt( Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2) );
 		}
 
 		// calculate score of current fit

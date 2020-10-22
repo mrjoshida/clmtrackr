@@ -361,6 +361,10 @@ var clm = {
 							currentPositions = calculatePositions(currentParameters, true);
 							
 							// Assign raw position data to easier names
+							currentPositionsSimple.eye_l = currentPositions[27];
+							currentPositionsSimple.eye_r = currentPositions[32];
+							currentPositionsSimple.mouth = currentPositions[60];
+							currentPositionsSimple.nose = currentPositions[62];
 
 							first = false;
 							detectingFace = false;
@@ -615,6 +619,8 @@ var clm = {
 			previousParameters = [];
 			currentPositions = [];
 			previousPositions = [];
+			currentPositionsSimple = {};
+			previousPositionsSimple = {};
 			for (var i = 0;i < currentParameters.length;i++) {
 				currentParameters[i] = 0;
 			}
